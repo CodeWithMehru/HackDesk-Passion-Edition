@@ -49,3 +49,33 @@ Make sure you have Node.js installed on your machine. You will also need active 
 ```bash
 git clone [https://github.com/CodeWithMehru/HackDesk-Passion-Edition.git](https://github.com/CodeWithMehru/HackDesk-Passion-Edition.git)
 cd HackDesk-Passion-Edition
+```
+
+**2. Install dependencies**
+```bash
+npm install
+```
+
+**3. Set up Environment Variables**
+Create a `.env.local` file in the root directory and add the following keys securely:
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+GOOGLE_AI_KEY=your_google_ai_key
+```
+
+**4. Run the Development Server**
+```bash
+npm run dev
+```
+Open http://localhost:3000 with your browser to see the result.
+
+## 🗄️ Database Schema
+This project relies on specific tables in Supabase:
+
+**Hackathon_Attendance:** Manages attendee data, sessions, and check-in status.
+**Theme_Ideas:** Stores AI-generated ideas, tracking the is_claimed boolean status to enable atomic locking.
+
+## 👨‍💻 Author
+Built by **CodeWithMehru**
